@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script src="./js/common.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW({ offset: 200 }).init();
+    </script>
+</head>
+<body id="app">
+    
+    <main>
+        <section class="main_visual" id="mainVisual">
+            <div class="from-w501">
+                <div class="main_visual-circle">
+                    <img src="./img/mvcircle.png" width="232" alt="urutsuya" />
+                </div>
+                <div class="main_visual-object1">
+                    <img src="./img/obj1.png" width="198" alt="urutsuya" />
+                </div>
+                <div class="main_visual-object2">
+                    <img src="./img/obj2.png" width="173" alt="urutsuya" />
+                </div>
+                <div class="main_visual-object3">
+                    <img src="./img/obj3.png" width="290" alt="urutsuya" />
+                </div>
+                <div class="main_visual-object4">
+                    <img src="./img/obj4.png" width="218" alt="urutsuya" />
+                </div>
+                <ul>
+                    <li>
+                        <div class="mv_text">
+                            <img src="./img/mvtext1.png" width="59" alt="urutsuya" />
+                        </div>
+                        <div class="mv_img">
+                            <img src="./img/mv3.png" width="356" alt="urutsuya" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mv_img">
+                            <img src="./img/mv4.png" width="356" alt="urutsuya" />
+                        </div>
+                        <div class="mv_text">
+                            <img src="./img/mvtext2.png" width="59" alt="urutsuya" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="to-w500">
+                <img src="./img/mvsp.png" alt="urutsuya" />
+                <h2>
+                    本来の潤いと本当の喜び。<br>
+                    髪1本１本、肌の奥深くまで浸透保湿。
+                </h2>
+            </div>
+        </section>
+        <script>
+            mainVisual.style.height = `${window.innerHeight}px`
+            window.onresize = () => {
+                mainVisual.style.height = `${window.innerHeight}px`
+            }
+        </script>
+
+        <section class="about">
+            <div class="wrap">
+                <h2 class="wow fadeInUp">
+                    本来の潤いと本当の喜び。<br>
+                    髪1本１本、肌の奥深くまで浸透保湿。
+                </h2>
+                <p class="wow fadeInUp">
+                    揺れるたびに艶めく潤いに満ちた髪とシミやしわのない潤いに満ちた肌が、<br>
+                    女性の内面の自信へとつながることを私たちは知っています。<br>
+                    サロンやエステで施術を受けたお客様が喜びに満ちた笑顔で扉を開け店を後にされる姿を想像しながら、<br>
+                    日々研究を重ねurutsuya.styleの商品は開発されています。<br>
+                    美しい髪と肌があなたを笑顔にすることを知っているから、毎日美しい髪と肌でいてほしい。<br>
+                    そんな思いからサロン帰りの美しいうるツヤ髪とエステ帰りのようなツヤ肌をご自宅でも再現できるようになりました。<br>
+                    urutsuya.styleは髪と肌に自信をまとわせ、扉を開けるあなたを応援します。
+                </p>
+            </div>
+        </section>
+
+        <section class="hair_care">
+            <div class="title wow fadeIn">
+                <picture>
+                    <source srcset="./img/haircare.png" width="65" media="(max-width: 480px)" />
+                    <img src="./img/haircare.png" width="88" alt="hair care" />
+                </picture>
+            </div>
+            <div class="wrap">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <div class="image">
+                                <picture>
+                                    <source srcset="./img/cien.png" width="100" media="(max-width: 480px)" />
+                                    <img src="./img/cien.png" width="157" alt="hair care" />
+                                </picture>
+                            </div>
+                            <h3>
+                                空洞化した髪を補修し、<br>
+                                本来の髪の美しさへ戻す。
+                            </h3>
+                            <p>
+                                貴方の髪を究極の潤艶へと導く。<br>
+                                最先端のトリートメント「シエン」
+                            </p>
+                            <a href="">MORE</a>
+                        </li>
+                        <li>
+                            <img src="./img/cienprod.png" width="643" alt="空洞化した髪を補修し、" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hair_care-object">
+                <div class="wrap">
+                    <img src="./img/obj5.png" width="218" alt="hair care" />
+                </div>
+            </div>
+        </section>
+
+        <section class="skin_care">
+            <div class="title wow fadeIn">
+                <picture>
+                    <source srcset="./img/skincare.png" width="65" media="(max-width: 480px)" />
+                    <img src="./img/skincare.png" width="88" alt="skin care" />
+                </picture>
+            </div>
+            <div class="skin_care-object">
+                <div class="wrap">
+                    <img src="./img/obj6.png" width="173" alt="skin care" />
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="content">
+                    <ul>
+                        <li>
+                            <div class="image">
+                                <picture>
+                                    <source srcset="./img/shrisila_text.png" width="163" media="(max-width: 480px)" />
+                                    <img src="./img/shrisila_text.png" width="308" alt="skin care" />
+                                </picture>
+                            </div>
+                            <h3>
+                                植物由来天然成分、<br>
+                                オーガニック認証成分だけを配合。
+                            </h3>
+                            <p>
+                                潤い肌に導く <br>
+                                スキンケアオイル「シュリシーラ」
+                            </p>
+                            <a href="">MORE</a>
+                        </li>
+                        <li>
+                            <img src="./img/shrisila.png" width="643" alt="空洞化した髪を補修し、" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_urutsuya">
+            <div class="wrap">
+                <div class="inner">
+                    <img src="./img/image-method.jpg" alt="about URUTSUYA.style" class="wow fadeInRight" />
+                    <h3 class="wow fadeInDown">about<span></span> URUTSUYA.style</h3>
+                </div>
+                <div class="description wow fadeInLeft">
+                    <h4>
+                        理想のヘアースタイルになれる。<br>うるツヤ髪で毎日が輝く。
+                    </h4>
+                </div>
+                <p>
+                    ずっと使い続けたいもの・・それはきっとあなたの髪とこころにとって最上のもの。<br>
+                    「あなたの最上になりたい」urutsuya.styleが向き合ってきた課題です。<br>
+                    毎日美しい髪を保てるように原料にこだわり、毎日使い続けられるように余計なものを極力省く。成分の効果を最大限に生かすために製造プロセスにこだわり、プロの手によって高品質なものを造る。<br>
+                    髪が美しいと気持ちが明るくなれる、少し自分に自信が持てた、そんな毎日を過ごせるように<br class="is_sp">
+                    urutsuya.styleは信頼できる製品をお届けしています。
+                </p>
+            </div>
+        </section>
+
+        <section class="professional">
+            <div class="wrap">
+                <div class="inner">
+                    <img src="./img/image-pro.jpg" alt="PROFESSIONAL" class="wow fadeInRight" />
+                    <h3 class="wow fadeInDown">PROFESSIONAL</h3>
+                </div>
+                <div class="description wow fadeInLeft">
+                    <h4>
+                        ヘアサロンでプロがお客様の施術に使用。<br>
+                        自信を持ってお勧めします。
+                    </h4>
+                </div>
+                <p>
+                    「こんな製品があったらいいのに・・」リアルなニーズをくれるのは毎日たくさんの髪を扱っている現場の美容師です。<br>
+                    「傷んだ髪は施術がしにくい」「髪のパサつきやうねりが邪魔をして最高の仕上がりにならない」・・健康でツヤと潤いがある髪は、お客様だけでなく現場で施術をする美容師の望みでもあるのです。<br>
+                    urutsuya.styleの製品は、髪のプロである美容師自身が施術の際に扱いやすい健康な髪質にするために、美容師の声をもとに開発されています。<br>
+                    余計なものを省き、本当に必要なものだけを科学的に見極め配合する。日々研究を重ね現場のプロに納得頂けた製品は、すでに多くのサロンでご使用いただいております。 
+                </p>
+            </div>
+        </section>
+
+        <section class="product">
+            <div class="wrap">
+                <div class="title">
+                    <h3>PRODUCT</h3>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <div class="image">
+                                <img src="./img/productcien.png" width="266" alt="cien">
+                            </div>
+                            <div class="description">
+                                <div class="caption">
+                                    <h4>
+                                        cien  インテンシブケア <br>
+                                        ミスト＆トリートメント2点セット
+                                    </h4>
+                                    <h5>
+                                        インテンシブケアミスト200ml】<br>
+                                        【インテンシブケアトリートメント200g】
+                                    </h5>
+                                    <p>
+                                        ¥7,700 <span>（税込）</span>
+                                    </p>
+                                </div>
+                                <div class="link">
+                                    <a href="">BUY</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <img src="./img/productshirisila.png" width="266" alt="cien">
+                            </div>
+                            <div class="description">
+                                <div class="caption">
+                                    <h4>
+                                        SHIRI SILA オーガニックオイル
+                                    </h4>
+                                    <h5>
+                                        【50ml ﾌｪｲｽ・ﾎﾞﾃﾞｨ・ﾍｱｵｲﾙ】
+                                    </h5>
+                                    <p>
+                                        ¥13,200 <span>（税込）</span>
+                                    </p>
+                                </div>
+                                <div class="link">
+                                    <a href="">BUY</a>
+                                </div>
+                            </div>                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

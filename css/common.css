@@ -1,0 +1,547 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap");
+.is_pc,
+.is_tab,
+.is_onlytab,
+.is_sp {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .is_sp {
+    display: block;
+  }
+}
+@media screen and (max-width: 780px) {
+  .is_tab {
+    display: block;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .is_onlytab {
+    display: block;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .is_pc {
+    display: block;
+  }
+}
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+html body {
+  font-family: "Noto Serif JP", serif;
+  line-height: 2;
+}
+html body a {
+  text-decoration: none;
+  color: #000000;
+}
+html body img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 501px) {
+  .main_visual {
+    background: linear-gradient(90deg, rgb(228, 231, 233) 50%, rgb(249, 250, 251) 50%);
+    position: relative;
+  }
+}
+.main_visual .from-w501 {
+  display: none;
+}
+@media (min-width: 501px) {
+  .main_visual .from-w501 {
+    display: block;
+    height: 100%;
+  }
+  .main_visual .from-w501 .main_visual-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main_visual .from-w501 .main_visual-object1 {
+    position: absolute;
+  }
+  .main_visual .from-w501 .main_visual-object2 {
+    position: absolute;
+    bottom: -15%;
+  }
+  .main_visual .from-w501 .main_visual-object3 {
+    position: absolute;
+    right: 0;
+    top: 15%;
+  }
+  .main_visual .from-w501 .main_visual-object4 {
+    position: absolute;
+    right: 10%;
+    bottom: -35%;
+  }
+  .main_visual .from-w501 ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    padding: 0 1rem;
+  }
+  .main_visual .from-w501 ul li {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main_visual .to-w500 {
+  display: none;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .main_visual .to-w500 {
+    display: flex;
+    flex-direction: column;
+  }
+  .main_visual .to-w500 img {
+    height: 71%;
+    object-fit: cover;
+    object-position: right;
+  }
+  .main_visual .to-w500 h2 {
+    font-size: 18px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about .wrap {
+  text-align: center;
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+.about .wrap h2 {
+  display: none;
+}
+@media (min-width: 501px) {
+  .about .wrap h2 {
+    display: block;
+    font-size: 32px;
+    padding-top: 130px;
+  }
+}
+.about .wrap p {
+  font-size: 14px;
+  padding-top: 6px;
+  font-family: "Noto Sans", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .about .wrap p {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+.hair_care, .skin_care {
+  margin-top: 100px;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .hair_care, .skin_care {
+    margin-top: 46px;
+  }
+}
+.hair_care .title, .skin_care .title {
+  text-align: center;
+}
+.hair_care .wrap, .skin_care .wrap {
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+  margin-right: 6%;
+}
+@media (max-width: 1250px) {
+  .hair_care .wrap, .skin_care .wrap {
+    margin-right: 0;
+  }
+}
+.hair_care .wrap .content, .skin_care .wrap .content {
+  position: relative;
+  z-index: 1;
+}
+.hair_care .wrap .content ul, .skin_care .wrap .content ul {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1008px) {
+  .hair_care .wrap .content ul, .skin_care .wrap .content ul {
+    flex-direction: column-reverse;
+  }
+}
+.hair_care .wrap .content ul li, .skin_care .wrap .content ul li {
+  text-align: center;
+}
+.hair_care .wrap .content ul li:first-child, .skin_care .wrap .content ul li:first-child {
+  margin-top: -10%;
+}
+@media (max-width: 1008px) {
+  .hair_care .wrap .content ul li:first-child, .skin_care .wrap .content ul li:first-child {
+    margin-top: -175px;
+  }
+}
+@media (max-width: 655px) {
+  .hair_care .wrap .content ul li:first-child, .skin_care .wrap .content ul li:first-child {
+    margin-top: -27%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hair_care .wrap .content ul li:first-child, .skin_care .wrap .content ul li:first-child {
+    margin-top: -28%;
+    width: 100%;
+  }
+}
+@media (max-width: 1008px) {
+  .hair_care .wrap .content ul li .image, .skin_care .wrap .content ul li .image {
+    text-align: right;
+  }
+}
+.hair_care .wrap .content ul li h3, .skin_care .wrap .content ul li h3 {
+  font-size: 28px;
+  line-height: 1.6;
+  padding: 20px 0 1rem;
+}
+@media screen and (max-width: 480px) {
+  .hair_care .wrap .content ul li h3, .skin_care .wrap .content ul li h3 {
+    font-size: 18px;
+  }
+}
+.hair_care .wrap .content ul li p, .skin_care .wrap .content ul li p {
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 480px) {
+  .hair_care .wrap .content ul li p, .skin_care .wrap .content ul li p {
+    padding-bottom: 20px;
+  }
+}
+.hair_care .wrap .content ul li a, .skin_care .wrap .content ul li a {
+  text-align: center;
+  max-width: 218px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid;
+  padding: 1rem;
+  transition: 0.4s;
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", sans-serif;
+}
+.hair_care .wrap .content ul li a:hover, .skin_care .wrap .content ul li a:hover {
+  color: #FFFFFF;
+  background: linear-gradient(to right, #87bccb, #7fccc5);
+  border: 1px solid transparent;
+}
+.hair_care-object {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .hair_care-object {
+    top: 0;
+    bottom: unset;
+    width: 50%;
+    right: 0;
+  }
+}
+.hair_care-object .wrap {
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.skin_care {
+  margin-top: 0;
+  padding-top: 50px;
+}
+.skin_care .title {
+  padding-bottom: 50px;
+}
+@media (max-width: 1008px) {
+  .skin_care .title {
+    padding-bottom: 0;
+  }
+}
+.skin_care .wrap {
+  margin-right: auto;
+  margin-left: 6%;
+}
+@media (max-width: 1250px) {
+  .skin_care .wrap {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1009px) {
+  .skin_care .wrap .content ul {
+    flex-direction: row-reverse;
+  }
+}
+.skin_care .wrap .content ul li:first-child {
+  max-width: 448px;
+  width: 100%;
+}
+@media (max-width: 1008px) {
+  .skin_care .wrap .content ul li:first-child {
+    max-width: unset;
+    margin-top: -131px;
+  }
+}
+@media (max-width: 712px) {
+  .skin_care .wrap .content ul li:first-child {
+    margin-top: -19%;
+  }
+}
+@media (max-width: 1008px) {
+  .skin_care .wrap .content ul li .image {
+    text-align: left;
+  }
+}
+.skin_care-object {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+}
+.skin_care-object .wrap {
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.about_urutsuya, .professional {
+  padding-top: 105px;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya, .professional {
+    padding-top: 50px;
+  }
+}
+.about_urutsuya .wrap, .professional .wrap {
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: 0;
+  padding-right: 0;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap, .professional .wrap {
+    padding-right: 1rem;
+  }
+}
+.about_urutsuya .wrap .inner, .professional .wrap .inner {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap .inner, .professional .wrap .inner {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap .inner img, .professional .wrap .inner img {
+    width: 100%;
+    margin-top: -25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_urutsuya .wrap .inner img, .professional .wrap .inner img {
+    margin-top: -18px;
+  }
+}
+.about_urutsuya .wrap .inner h3, .professional .wrap .inner h3 {
+  font-size: 36px;
+  font-family: "Comfortaa", cursive;
+  white-space: nowrap;
+  font-weight: lighter;
+  margin-right: -45px;
+  padding-top: 80px;
+  text-align: center;
+  line-height: 1.2;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap .inner h3, .professional .wrap .inner h3 {
+    padding-top: 0;
+    margin-right: 0;
+  }
+  .about_urutsuya .wrap .inner h3 span, .professional .wrap .inner h3 span {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about_urutsuya .wrap .inner h3, .professional .wrap .inner h3 {
+    font-size: 24px;
+  }
+}
+.about_urutsuya .wrap .description, .professional .wrap .description {
+  padding-top: 12px;
+  padding-right: 12px;
+  max-width: 570px;
+  width: 100%;
+  background-color: #FFFFFF;
+  margin-top: -65px;
+  position: relative;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap .description, .professional .wrap .description {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+.about_urutsuya .wrap .description h4, .professional .wrap .description h4 {
+  font-size: 28px;
+  line-height: 1.8;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .about_urutsuya .wrap .description h4, .professional .wrap .description h4 {
+    font-size: 18px;
+  }
+}
+.about_urutsuya .wrap p, .professional .wrap p {
+  font-family: "Noto Sans", sans-serif;
+}
+@media (max-width: 1165px) {
+  .about_urutsuya .wrap p .is_pc, .professional .wrap p .is_pc {
+    display: none;
+  }
+}
+
+.professional .wrap .description {
+  max-width: 680px;
+}
+
+.product {
+  padding-top: 80px;
+}
+@media screen and (max-width: 480px) {
+  .product {
+    padding-top: 60px;
+  }
+}
+.product .wrap {
+  max-width: calc(1000px + 2rem);
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+.product .wrap .title h3 {
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 36px;
+  line-height: 1;
+  padding-bottom: 40px;
+}
+@media (max-width: 480px) {
+  .product .wrap .title h3 {
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+}
+.product .wrap .content ul {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.product .wrap .content ul li {
+  max-width: 275px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.product .wrap .content ul li .image img {
+  width: 100%;
+}
+.product .wrap .content ul li .description {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product .wrap .content ul li .description .caption {
+  width: 100%;
+}
+.product .wrap .content ul li .description .caption h4 {
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  padding-top: 14px;
+  font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  .product .wrap .content ul li .description .caption h4 {
+    font-size: 14px;
+  }
+}
+.product .wrap .content ul li .description .caption h5 {
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", sans-serif;
+  padding: 10px 0;
+}
+@media screen and (max-width: 480px) {
+  .product .wrap .content ul li .description .caption h5 {
+    font-size: 12px;
+  }
+}
+.product .wrap .content ul li .description .caption p {
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 480px) {
+  .product .wrap .content ul li .description .caption p {
+    font-size: 13px;
+  }
+}
+.product .wrap .content ul li .description .caption p span {
+  font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  .product .wrap .content ul li .description .caption p span {
+    font-size: 10px;
+  }
+}
+.product .wrap .content ul li .description .link {
+  width: 100%;
+  align-self: flex-end;
+}
+.product .wrap .content ul li .description .link a {
+  text-align: center;
+  max-width: 218px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid;
+  padding: 1rem;
+  transition: 0.4s;
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "ＭＳ ゴシック", sans-serif;
+  max-width: 100%;
+}
+.product .wrap .content ul li .description .link a:hover {
+  color: #FFFFFF;
+  background: linear-gradient(to right, #87bccb, #7fccc5);
+  border: 1px solid transparent;
+}
+@media screen and (max-width: 480px) {
+  .product .wrap .content ul li .description .link a {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=common.css.map */

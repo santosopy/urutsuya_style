@@ -1,0 +1,546 @@
+@charset "UTF-8";
+/* CSS Document */
+
+$white: #FFFFFF;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+$breakpoints: (
+'sp': (max-width: 480px),
+'tab': (max-width: 780px),
+'note': (max-width: 1024px),
+'pc': (min-width: 1025px)
+) !default;
+@mixin media($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+}
+
+@mixin wrap{
+    max-width: calc(1000px + 2rem);
+    margin: auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.is_pc,
+.is_tab,
+.is_onlytab,
+.is_sp{
+    display: none;
+}
+@include media(sp){
+    .is_sp{
+        display: block;
+    }
+}
+@include media(tab){
+    .is_tab{
+        display: block;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px){
+    .is_onlytab{
+        display: block;
+    }
+}
+@include media(pc){
+    .is_pc{
+        display: block;
+    }
+}
+@mixin serif{
+    font-family: 'Noto Serif JP', serif;
+}
+@mixin gothic{
+    font-family: '游ゴシック','ヒラギノ角ゴ Pro W3','ＭＳ ゴシック',sans-serif;
+}
+@mixin sans{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@mixin button{
+    text-align: center;
+    max-width: 218px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid;
+    padding: 1rem;
+    transition: 0.4s;
+    @include gothic();
+    
+    &:hover{
+        color: $white;
+        background: linear-gradient(to right, #87bccb, #7fccc5);
+        border: 1px solid transparent;
+    }
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+
+    body{
+        @include serif();
+        line-height: 2;
+
+        a{
+            text-decoration: none;
+            color: #000000;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.main_visual{
+    @media (min-width: 501px){
+        background: linear-gradient(90deg, rgba(228,231,233,1) 50%, rgba(249,250,251,1) 50%);
+        position: relative;
+    }
+
+    .from-w501{
+        display: none;
+
+        @media (min-width: 501px){
+            display: block;
+            height: 100%;
+
+            .main_visual-circle{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .main_visual-object1{
+                position: absolute;
+            }
+            .main_visual-object2{
+                position: absolute;
+                bottom: -15%;
+            }
+            .main_visual-object3{
+                position: absolute;
+                right: 0;
+                top: 15%;
+            }
+            .main_visual-object4{
+                position: absolute;
+                right: 10%;
+                bottom: -35%;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                position: relative;
+                padding: 0 1rem;
+
+                li{
+                    display: flex;
+                    width: 50%;
+                    justify-content: center;
+                    align-items: center
+                }
+            }
+        }
+    }
+    .to-w500{
+        display: none;
+        height: 100%;
+        @media (max-width: 500px){
+            display: flex;
+            flex-direction: column;
+
+            img{
+                height: 71%;
+                object-fit: cover;
+                object-position: right;
+            }
+            h2{
+                font-size: 18px;
+                text-align: center;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.about{
+    .wrap{
+        text-align: center;
+        @include wrap();
+        
+        h2{
+            display: none;
+            @media (min-width: 501px) {
+                display: block;
+                font-size: 32px;
+                padding-top: 130px;
+            }
+        }
+        p{
+            font-size: 14px;
+            padding-top: 6px;
+            @include sans();
+            @include media(sp){
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.hair_care{
+    margin-top: 100px;
+    position: relative;
+    @include media(sp){
+        margin-top: 46px;
+    }
+
+    .title{
+        text-align: center;
+    }
+    .wrap{        
+        @include wrap();
+        margin-right: 6%;
+        @media (max-width: 1250px) {
+            margin-right: 0;
+        }
+
+        .content{
+            position: relative;
+            z-index: 1;
+            
+            ul{
+                display: flex;
+                align-items: center;
+                @media (max-width: 1008px) {
+                    flex-direction: column-reverse;
+                }
+
+                li{
+                    text-align: center;
+
+                    &:first-child{
+                        margin-top: -10%;
+                        @media (max-width: 1008px) {
+                            margin-top: -175px;
+                        }
+                        @media (max-width: 655px) {
+                            margin-top: -27%;
+                        }
+                        @include media(sp){
+                            margin-top: -28%;
+                            width: 100%;
+                        }
+                    }
+                    .image{
+                        @media (max-width: 1008px) {
+                            text-align: right;
+                        }
+                    }
+                    h3{
+                        font-size: 28px;
+                        line-height: 1.6;
+                        padding: 20px 0 1rem;
+                        @include media(sp){
+                            font-size: 18px;
+                        }
+                    }
+                    p{
+                        padding-bottom: 30px;
+                        @include media(sp){
+                            padding-bottom: 20px;
+                        }
+                    }
+                    a{
+                        @include button();
+                    }
+                }
+            }
+        }
+    }
+    &-object{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        @include media(sp){
+            top: 0;
+            bottom: unset;
+            width: 50%;
+            right: 0;
+        }
+
+        .wrap{
+            @include wrap();
+        }
+    }
+}
+
+.skin_care{
+    @extend .hair_care;
+    margin-top: 0;
+    padding-top: 50px;
+
+    .title{
+        padding-bottom: 50px;
+        @media (max-width: 1008px) {
+            padding-bottom: 0;
+        }
+    }
+    &-object{
+
+    }
+    .wrap{
+        margin-right: auto;
+        margin-left: 6%;
+        @media (max-width: 1250px) {
+            margin-left: 0;
+        }
+        
+        .content{
+            ul{
+                @media (min-width: 1009px){
+                    flex-direction: row-reverse;
+                }
+
+                li{
+                    &:first-child{
+                        max-width: 448px;
+                        width: 100%;
+                        @media (max-width: 1008px) {
+                            max-width: unset;
+                            margin-top: -131px;
+                        }
+                        @media (max-width: 712px) {
+                            margin-top: -19%;
+                        }
+                    }
+
+                    .image{
+                        @media (max-width: 1008px) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-object{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        text-align: right;
+
+        .wrap{
+            @include wrap();
+        }
+    }
+}
+
+.about_urutsuya{
+    padding-top: 105px;
+    @media (max-width: 1165px){
+        padding-top: 50px;
+    }
+
+    .wrap{
+        @include wrap();
+        max-width: 1200px;
+        margin-right: 0;
+        padding-right: 0;
+        @media (max-width: 1165px){
+            padding-right: 1rem;
+        }
+
+        .inner{
+            display: flex;
+            flex-direction: row-reverse;
+            @media (max-width: 1165px){
+                flex-direction: column-reverse;
+                align-items: flex-end;
+            }
+
+            img{
+                @media (max-width: 1165px){
+                    width: 100%;
+                    margin-top: -25px;
+                }
+                @include media(sp){
+                    margin-top: -18px;
+                }
+            }
+            h3{
+                font-size: 36px;
+                font-family: 'Comfortaa', cursive;
+                white-space: nowrap;
+                font-weight: lighter;
+                margin-right: -45px;
+                padding-top: 80px;
+                text-align: center;
+                line-height: 1.2;
+                @media (max-width: 1165px){
+                    padding-top: 0;
+                    margin-right: 0;
+
+                    span{
+                        display: block;
+                    }
+                }
+                @include media(sp){
+                    font-size: 24px;
+                }
+            }
+        }
+        .description{
+            padding-top: 12px;
+            padding-right: 12px;
+            max-width: 570px;
+            width: 100%;
+            background-color: $white;
+            margin-top: -65px;
+            position: relative;
+            @media (max-width: 1165px){
+                margin-top: 0;
+                max-width: 100%;
+            }
+            
+            h4{
+                font-size: 28px;
+                line-height: 1.8;
+                padding-bottom: 20px;
+                @include media(sp){
+                    font-size: 18px;
+                }
+            }
+        }
+        p{
+            @include sans();
+            @media (max-width: 1165px){
+                .is_pc{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.professional{
+    @extend .about_urutsuya;
+
+    .wrap{
+        .description{
+            max-width: 680px;
+        }
+    }
+}
+
+.product{
+    padding-top: 80px;
+    @include media(sp){
+        padding-top: 60px;
+    }
+
+    .wrap{
+        @include wrap();
+
+        .title{
+            h3{
+                text-align: center;
+                font-family: 'Comfortaa', cursive;
+                font-size: 36px;
+                line-height: 1;
+                padding-bottom: 40px;
+                @media (max-width: 480px){
+                    font-size: 24px;
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        .content{
+            ul{
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+                
+                li{
+                    max-width: 275px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .image{
+                        img{
+                            width: 100%
+                        }
+                    }
+                    .description{
+                        flex: 1;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .caption{
+                            width: 100%;
+
+                            h4{
+                                @include gothic();
+                                font-weight: 700;
+                                line-height: 1.5;
+                                padding-top: 14px;
+                                font-size: 16px;
+                                @include media(sp){
+                                    font-size: 14px;
+                                }
+                            }
+                            h5{
+                                @include gothic();
+                                padding: 10px 0;
+                                @include media(sp){
+                                    font-size: 12px;
+                                }
+                            }
+                            p{
+                                @include gothic();
+                                font-size: 21px;
+                                font-weight: 700;
+                                padding-bottom: 5px;
+                                @include media(sp){
+                                    font-size: 13px;
+                                }
+    
+                                span{
+                                    font-size: 16px;
+                                    @include media(sp){
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        .link{
+                            width: 100%;
+                            align-self: flex-end;
+    
+                            a{
+                                @include button();
+                                max-width: 100%;
+                                @include media(sp){
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

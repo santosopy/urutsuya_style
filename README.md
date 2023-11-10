@@ -1,1 +1,0 @@
-# urutsuya_style
