@@ -340,13 +340,6 @@ html body img {
   padding: 0 1rem;
   width: 100%;
   max-width: 1200px;
-  margin-right: 0;
-  padding-right: 0;
-}
-@media (max-width: 1165px) {
-  .about_urutsuya .wrap, .professional .wrap {
-    padding-right: 1rem;
-  }
 }
 .about_urutsuya .wrap .inner, .professional .wrap .inner {
   display: flex;
@@ -415,7 +408,7 @@ html body img {
 }
 @media screen and (max-width: 480px) {
   .about_urutsuya .wrap .description h4, .professional .wrap .description h4 {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 .about_urutsuya .wrap p, .professional .wrap p {

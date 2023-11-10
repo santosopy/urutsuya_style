@@ -357,11 +357,6 @@ html{
     .wrap{
         @include wrap();
         max-width: 1200px;
-        margin-right: 0;
-        padding-right: 0;
-        @media (max-width: 1165px){
-            padding-right: 1rem;
-        }
 
         .inner{
             display: flex;
@@ -420,7 +415,7 @@ html{
                 line-height: 1.8;
                 padding-bottom: 20px;
                 @include media(sp){
-                    font-size: 18px;
+                    font-size: 17px;
                 }
             }
         }
